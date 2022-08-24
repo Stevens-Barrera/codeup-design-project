@@ -6,14 +6,14 @@
 	width: 55px;
 }
 
-
-
-
-
+body {
+    background-color: #E6E6E6;
+}
 
 
 .main, img{
 	width: 250px;
+
 }
 
 
@@ -60,47 +60,62 @@
 }
 
 /*//Small Display*/
-@media screen and (max-width:425px) {
+@media screen and (min-width:250px) and (max-width:425px) {
 
 }
 
 /*//Medium Display*/
-@media screen and (max-width:768px) {
+@media screen and (min-width:426px) and (max-width:768px) {
+
 
 }
 
 /*//Large Display*/
-@media screen and (min-width:500px) {
+@media screen and (min-width:769px) and (max-width:1450px) {
 
-
-    body {
-        background-color: #E6E6E6;
-        margin:0 40px;
+    /*This class container sets a margin to push all the content to the center of the screen*/
+    .content-margin{
+        margin: 0 120px;
     }
 
-    nav{
-        position: ;
-        width: 100%;
+    /*This class sets a flex container for the main and side content*/
+    .main-flex-container{
+        display: flex;
+
     }
+
+    /*This class sets a flex container*/
     main{
-        display: inline-flex;
-        width: 45%
-    };
-
-    aside{
-        display: inline-flex;
-        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /*width: 70%;*/
+        /*flex-grow: 1;*/
     }
+
+    /*This class styles the main centered content*/
     .main-section{
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        width: 40%;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    /*This class styles the main centered content*/
+    .side-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 30%;
+    }
+
+    .side-section, p{
+        display: flex;
+        justify-content: center;
     }
 
 
-    .side-section{
+    .side-div{
         display: flex;
-        width: 40%;
     }
 }
